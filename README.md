@@ -57,3 +57,6 @@ If you need support, please [contact me](mailto:m4halgita@yahoo.com) or make an 
 
 # Requests
 If you would like to add a request, either send it as an issue or [contact me](mailto:m4halgita@yahoo.com).
+
+# Upcoming changes
+- Give the option to move instead of copying for those who don't have enough disk space on 1 drive.
