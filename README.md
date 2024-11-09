@@ -65,8 +65,8 @@ If you need support, please [contact me](mailto:m4halgita@yahoo.com) or make an 
 If you would like to add a request, either send it as an issue or [contact me](mailto:m4halgita@yahoo.com).
 
 # Changelogs
-- Give the option to move instead of copying for those who don't have enough disk space on 1 drive. (must have less than sufficient disk space to be offered to move files)
-- Make personal files be the first thing to move and give a confirmation, just to make sure you have the chance to change your mind. Previously, settings would automatically transfer without confirmation then ask to transfer personal files, now different to ensure you can change your mind and have your install in the exact same state as you previously had it.
+- Give the option to move instead of copying for those who don't have enough disk space on 1 drive. (must have less than sufficient disk space to be offered to move files) - v1.0.1
+- Make personal files be the first thing to move and give a confirmation, just to make sure you have the chance to change your mind. Previously, settings would automatically transfer without confirmation then ask to transfer personal files, now different to ensure you can change your mind and have your install in the exact same state as you previously had it. - v1.0.1
 
-* Upcoming features
+# Upcoming features
 - N/A, recommend us some in the issues tab!
