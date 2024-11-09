@@ -47,10 +47,8 @@ Some system settings as they are relying on system files and are best not to tou
 Not at the moment, I am looking to have this as an option in the not-too-distant future.
 
 # Responsibility Info
-I am not responsible for the damage of you're Mac if it is either corrupted or damaged. No warranty is INCLUDED. If anything happens, fault goes on YOU.
+I am not responsible for the damage of you're Mac if it is either corrupted or damaged. No warranty is INCLUDED. If anything happens, fault goes on YOU for taking the risk.
 # Support Info
 If you need support, please [contact me](mailto:m4halgita@yahoo.com) or make a issue on this repository.
-# Extra info for Developers
-If you would like a uncompiled copy of this app, download the code for this repo. The source code includes an uncompiled Xcode Project for Prank 1.2.1-alpha-v1 for developers.
 # Requests
 If you would like to add a request, either send it as an issue or [contact me](mailto:m4halgita@yahoo.com).
