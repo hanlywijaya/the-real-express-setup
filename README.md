@@ -44,10 +44,16 @@ No, it uses commands already built into the system and just uses those.
 Some system settings as they are relying on system files and are best not to touch them and rather do on your own, installing software such as Python, Oh-My-Zsh, and copying over your applications.
 
 *Let’s say I have 100gb out of 128gb available on my new macOS install and 120gb of 128gb used on my old install, can I simply move it without a fuss?*
-Not at the moment, I am looking to have this as an option in the not-too-distant future.
+Yes! That's a new feature we have added, now ensuring those with less disk space then they need that they can move their files in 1 go, not needing to copy, delete, copy, delete, manually. If the script detects you have less space than what's required, it will offer you the ability to move instead of copying your files.
 
 *Can I go up or down versions using this script?*
 The script supports both upgrading and downgrading, as long as you have 2 partitions (2 installs), all setup and ready to go, it should work just fine.
+
+*I can't open the script, it says I don't have permission!*
+Please run the command chmod +x /path/to/the-real-express-setup.sh and it should run no problem. Try again as sudo chmod +x /path/to/the-real-express-setup.sh and enter your password if the previous command doesn't work.
+
+*What do I do after using the script?*
+Restart, ensure everything worked, if not, retry the script. If it did, personalise to your own liking, and remove the partition using Disk Utility or any disk management application you prefer, as long as it gets the job done.
 
 # Responsibility Info
 I am not responsible for the damage of your Mac if it is either corrupted or damaged. No warranty is INCLUDED. If anything happens, fault goes on YOU for taking the risk.
@@ -58,5 +64,9 @@ If you need support, please [contact me](mailto:m4halgita@yahoo.com) or make an 
 # Requests
 If you would like to add a request, either send it as an issue or [contact me](mailto:m4halgita@yahoo.com).
 
-# Upcoming changes
-- Give the option to move instead of copying for those who don't have enough disk space on 1 drive.
+# Changelogs
+- Give the option to move instead of copying for those who don't have enough disk space on 1 drive. (must have less than sufficient disk space to be offered to move files)
+- Make personal files be the first thing to move and give a confirmation, just to make sure you have the chance to change your mind. Previously, settings would automatically transfer without confirmation then ask to transfer personal files, now different to ensure you can change your mind and have your install in the exact same state as you previously had it.
+
+* Upcoming features
+- N/A, recommend us some in the issues tab!
