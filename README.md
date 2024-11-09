@@ -46,9 +46,14 @@ Some system settings as they are relying on system files and are best not to tou
 *Let's say I have 100gb out of 128gb available on my new macOS install and 120gb of 128gb used on my old install, can I simply move it without a fuss?*
 Not at the moment, I am looking to have this as an option in the not-too-distant future.
 
+*Can I go up or down versions using this script?*
+The script supports both upgrading and downgrading, as long as you have 2 partitions (2 installs), all setup and ready to go, it should work just fine.
+
 # Responsibility Info
 I am not responsible for the damage of you're Mac if it is either corrupted or damaged. No warranty is INCLUDED. If anything happens, fault goes on YOU for taking the risk.
+
 # Support Info
 If you need support, please [contact me](mailto:m4halgita@yahoo.com) or make a issue on this repository.
+
 # Requests
 If you would like to add a request, either send it as an issue or [contact me](mailto:m4halgita@yahoo.com).
