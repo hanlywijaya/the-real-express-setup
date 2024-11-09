@@ -4,7 +4,7 @@
 current_user=$(whoami)
 
 # Script disclaimer
-echo "This script will copy system settings and personal files to a new macOS install."
+echo "This script will copy or move system settings and personal files to a new macOS install."
 echo "You are running this script as: $current_user"
 echo "Press Y to continue..."
 read -n 1 -s -r response
@@ -30,6 +30,58 @@ fi
 # Define the user settings directories for old and new user accounts
 user_settings_dir="/Volumes/$old_mac_drive/Users/$old_username"
 new_user_settings_dir="/Users/$current_user"
+
+# Function to check available disk space
+check_disk_space() {
+  # Get available disk space for the new system disk (in GB)
+  available_space=$(df -h / | grep -v Filesystem | awk '{print $4}' | sed 's/G//')
+  
+  # Assume not enough space if less than 10GB
+  if (( available_space < 10 )); then
+    return 0  # Low disk space
+  else
+    return 1  # Enough space
+  fi
+}
+
+# Function to estimate total size of the files to copy
+estimate_files_size() {
+  # Get the size of the files to be copied (excluding Downloads, Movies, Pictures, etc.)
+  total_size=$(du -sh --exclude='Downloads' --exclude='Movies' --exclude='Pictures' --exclude='Music' --exclude='Videos' "$user_settings_dir" | awk '{print $1}')
+  echo $total_size
+}
+
+# Estimate files size
+estimated_size=$(estimate_files_size)
+echo "Estimated size of files to copy: $estimated_size"
+
+# Check if there's enough space on the new disk
+if ! check_disk_space; then
+  echo "There is not enough space to copy the files. Available space: ${available_space}G, Estimated size: ${estimated_size}G"
+  echo "Would you like to move the files instead of copying them? (move/skip)"
+  read move_action
+  case "$move_action" in
+    "move")
+      echo "Moving personal files..."
+      
+      # Moving files from the home folder excluding Downloads, Movies, etc.
+      rsync -av --remove-source-files --progress --exclude 'Downloads' --exclude 'Movies' --exclude 'Pictures' --exclude 'Music' --exclude 'Videos' \
+        "$user_settings_dir/" "$new_user_settings_dir/"
+      break
+      ;;
+    "skip")
+      echo "Skipping file operation due to insufficient space."
+      exit 1
+      ;;
+    *)
+      echo "Invalid option. Exiting script."
+      exit 1
+      ;;
+  esac
+fi
+
+# If there is enough space, proceed to copy files
+echo "There is enough space to copy the files. Proceeding with copying files..."
 
 # Function to copy files if they exist
 copy_if_exists() {
@@ -98,9 +150,9 @@ while true; do
 done
 
 # Completion message
-echo "File copying complete. Thank you for using the-real-express-setup script."
+echo "File copying complete. Thank you for using the script."
 
-# Ask for shutdown, reboot or nothing
+# Ask for shutdown, reboot, or nothing
 while true; do
   echo "Would you like to restart, shut down, or do nothing? (restart/shutdown/nothing)"
   read action
