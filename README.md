@@ -1,7 +1,7 @@
 # the-real-express-setup
 Easy upgrading and downgrading macOS with this script!
 
-**Ever had that annoying problem of forgetting to do a SuperDuper! or Time Machine backup, upgrading macOS’es, then completely regretting it the second you get a beachball while setting up? This is a solution for you!**
+**Ever had that annoying problem of f-ing up your Filevault encryption, forgetting to do a SuperDuper! or Time Machine backup before updating then completely regretting it the second you get a beachball while setting up? This is a solution for you!**
 the-real-express-setup, a script that can fix that problem.
 
 # How to use the-real-express-setup
@@ -12,6 +12,7 @@ Prerequisites:
 - A brain
 
 Steps:
+- Copy/install all your previous apps to make sure everything works properly
 - Open Terminal
 - Run the script (e.g. /Users/hanlyw/Downloads/the-real-express-setup.sh)
 - Press Y when it asks you to accept the risk (this is up to you boss)
@@ -40,8 +41,17 @@ I have tested this whole script on a mid-2014 MacBook Pro going from Ventura to 
 *Do you need any prerequisites?*
 No, it uses commands already built into the system and just uses those.
 
+*Can I use this to upgrade SSD's while up/down-grading OS'es and transfer my data?*
+Yes, it should work with no issue whatsoever.
+
 *What will I most likely need to do on my own?*
 Some system settings as they are relying on system files and are best not to touch them and rather do on your own, installing software such as Python, Oh-My-Zsh, and copying over your applications.
+
+*Why is some of my apps missing from the dock?*
+It is recommended to copy/install all your previous applications to get as much of a seamless transfer as possible. Some apps may not show up if you are changing OS'es, such as System Settings, that would become System Preferences if you were going from Ventura to Monterey, causing a question mark symbol in the dock. It relies off of names of apps rather than the actual apps themselves.
+
+*Does this transfer over features from newer macOS'es or older versions?*
+No, you will not be getting Apple Intelligence going from macOS Sequoia to macOS Sonoma.
 
 *Let’s say I have 100gb out of 128gb available on my new macOS install and 120gb of 128gb used on my old install, can I simply move it without a fuss?*
 Yes! That's a new feature we have added, now ensuring those with less disk space then they need that they can move their files in 1 go, not needing to copy, delete, copy, delete, manually. If the script detects you have less space than what's required, it will offer you the ability to move instead of copying your files.
