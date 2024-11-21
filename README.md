@@ -9,7 +9,7 @@ Prerequisites:
 - 2 macOS installs on seperate partitions
 - Both installs setup and ready to go
 - The script file
-- A brain
+- A functional brain
 
 Steps:
 - Copy/install all your previous apps to make sure everything works properly
@@ -75,6 +75,9 @@ The script supports both upgrading and downgrading, as long as you have 2 partit
 
 Please run the command chmod +x /path/to/the-real-express-setup.sh and it should run no problem. Try again as sudo chmod +x /path/to/the-real-express-setup.sh and enter your password if the previous command doesn't work.
 
+- **All my files are missing? What's going on?**
+There is the chance where it has copied to a root folder. Go to Finder, press COMMAND+SHIFT+G simultaneously to open the 'Go' menu and search for /Users/root/. You should be able to find everything there, and manually copy to your user. It is currently a bug being figured out and fixed.
+
 - **What do I do after using the script?**
 
 Restart, ensure everything worked, if not, retry the script. If it did, personalise to your own liking, and remove the partition using Disk Utility or any disk management application you prefer, as long as it gets the job done.
@@ -93,4 +96,5 @@ If you would like to add a request, either send it as an issue or [contact me](m
 - Make personal files be the first thing to move and give a confirmation, just to make sure you have the chance to change your mind. Previously, settings would automatically transfer without confirmation then ask to transfer personal files, now different to ensure you can change your mind and have your install in the exact same state as you previously had it. - v1.0.1
 
 # Upcoming features
-- N/A, recommend us some in the issues tab!
+- Add a feature that allows you to copy everything to a new user on the same partition, in the case of a damaged home folder, or something broken with a user account that cannot be fixed without a replacement user account.
+- Fix sudo issues as it may copy to root.
